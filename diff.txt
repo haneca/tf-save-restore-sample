@@ -1,0 +1,10 @@
+158a159,161
+>   import os
+>   MODEL_PATH = './tensorflowModel.ckpt'
+>   saver = tf.train.Saver()
+160a164,166
+>     if os.path.exists(MODEL_PATH+'.meta'):
+>       saver = tf.train.import_meta_graph(MODEL_PATH+'.meta')
+>       saver.restore(sess, MODEL_PATH)
+167a174
+>     saver.save(sess, MODEL_PATH)
